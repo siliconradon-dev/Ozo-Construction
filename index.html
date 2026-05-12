@@ -77,7 +77,7 @@
     />
 
     <!-- Background video — replace src with your own .mp4 -->
-    <video id="heroVideo" autoplay muted loop playsinline
+    <video id="heroVideo" autoplay muted loop
       oncanplay="document.getElementById('heroFallback').style.display='none'">
       <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
     </video>
@@ -111,10 +111,10 @@
         <!-- Right: description + stats -->
         <div class="col-md-7">
           <div class="sec-label">About OZO Construction</div>
-          <h2 class="fw-bolder mb-3" style="font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.2; color: var(--dark);">
+          <h2 class="fw-bolder mb-3 section-title-lg-tight">
             We Are The Leader In Construction
           </h2>
-          <p class="text-muted mb-4" style="line-height: 1.75; font-size: 0.95rem;">
+          <p class="text-muted mb-4 section-text-wide">
             The company was established in November 2014 as a Construction Company
             for Commercial Buildings. For the last years, OZO Construction (Pvt) Ltd
             stood for its quality, integrity, and professionalism. We are dedicated to
@@ -149,15 +149,15 @@
        SECTION 4: EXPECTATIONS (Mission & Vision)
        Dark navy bg. Hover on card turns it white.
   ============================================= -->
-  <section id="expectations" class="py-5" style="background: var(--dark);">
+  <section id="expectations" class="py-5 section-bg-dark">
     <div class="container py-4">
 
       <!-- Heading -->
       <div class="text-center mb-5">
-        <div class="sec-label justify-content-center" style="color: var(--yellow);">
+        <div class="sec-label justify-content-center section-label-yellow">
           We Can Do It
         </div>
-        <h2 class="fw-bolder text-white mt-1" style="font-size: clamp(1.8rem, 3vw, 2.4rem);">
+        <h2 class="fw-bolder text-white mt-1 section-title-lg">
           What our Expectations are?
         </h2>
       </div>
@@ -213,7 +213,7 @@
       <!-- Heading -->
       <div class="text-center mb-5">
         <div class="sec-label justify-content-center">Our Services</div>
-        <h2 class="fw-bolder mt-1" style="font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--dark);">
+        <h2 class="fw-bolder mt-1 section-title-lg">
           Improve Your<br>experience With Us
         </h2>
       </div>
@@ -227,7 +227,7 @@
               src="https://ozoconstruction.com/wp-content/uploads/2022/02/Tools-icon-07.png"
               alt="Rebuild Construction"
               class="svc-icon"
-              onerror="this.outerHTML='<i class=\'bi bi-tools d-block mb-3\' style=\'font-size:3.5rem;color:var(--dark);\'></i>'"
+              onerror="this.outerHTML='<i class=\'bi bi-tools d-block mb-3 svc-fallback-icon\'></i>'"
             />
             <h6>rebuild Construction</h6>
             <button class="arrow-btn" aria-label="View"><i class="bi bi-chevron-right"></i></button>
@@ -241,7 +241,7 @@
               src="https://ozoconstruction.com/wp-content/uploads/2022/02/Engineer-icon-08.png"
               alt="Consultancy Construction"
               class="svc-icon"
-              onerror="this.outerHTML='<i class=\'bi bi-person-gear d-block mb-3\' style=\'font-size:3.5rem;color:var(--dark);\'></i>'"
+              onerror="this.outerHTML='<i class=\'bi bi-person-gear d-block mb-3 svc-fallback-icon\'></i>'"
             />
             <h6>consultancy Construction</h6>
             <button class="arrow-btn" aria-label="View"><i class="bi bi-chevron-right"></i></button>
@@ -255,7 +255,7 @@
               src="https://ozoconstruction.com/wp-content/uploads/2022/02/Construction-icon-09.png"
               alt="Refine Construction"
               class="svc-icon"
-              onerror="this.outerHTML='<i class=\'bi bi-building-up d-block mb-3\' style=\'font-size:3.5rem;color:var(--dark);\'></i>'"
+              onerror="this.outerHTML='<i class=\'bi bi-building-up d-block mb-3 svc-fallback-icon\'></i>'"
             />
             <h6>Refine Construction</h6>
             <button class="arrow-btn" aria-label="View"><i class="bi bi-chevron-right"></i></button>
@@ -269,7 +269,7 @@
               src="https://ozoconstruction.com/wp-content/uploads/2022/02/Architecture-icon-10.png"
               alt="Customize Construction"
               class="svc-icon"
-              onerror="this.outerHTML='<i class=\'bi bi-pencil-square d-block mb-3\' style=\'font-size:3.5rem;color:var(--dark);\'></i>'"
+              onerror="this.outerHTML='<i class=\'bi bi-pencil-square d-block mb-3 svc-fallback-icon\'></i>'"
             />
             <h6>Customize Construction</h6>
             <button class="arrow-btn" aria-label="View"><i class="bi bi-chevron-right"></i></button>
@@ -286,13 +286,13 @@
        SECTION 6: HEAVY MACHINES CTA
        Dark navy bg. Yellow pill button (hover → white).
   ============================================= -->
-  <section id="heavy" class="py-5 text-white text-center" style="background: var(--dark);">
+  <section id="heavy" class="py-5 text-white text-center section-bg-dark">
     <div class="container py-4">
-      <div class="sec-label justify-content-center" style="color: var(--yellow);">We Have</div>
-      <h2 class="fw-bolder text-white mt-1 mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">
+      <div class="sec-label justify-content-center section-label-yellow">We Have</div>
+      <h2 class="fw-bolder text-white mt-1 mb-4 section-title-xl">
         Heavy Duty Machines
       </h2>
-      <a href="https://www.youtube.com/watch?v=4CbEIz92buM" target="_blank" class="pill-btn">
+      <a href="https://www.youtube.com/watch?v=4CbEIz92buM" target="_blank" rel="noopener noreferrer" class="pill-btn">
         <span class="pill-text">Check Out Our Videos</span>
         <span class="pill-icon"><i class="bi bi-play-fill"></i></span>
       </a>
@@ -311,20 +311,20 @@
       <!-- Managing Director -->
       <div class="text-center mb-5">
         <div class="sec-label justify-content-center">Chairman / Managing Director</div>
-        <h2 class="fw-bolder mt-1 mb-4" style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--dark);">
+        <h2 class="fw-bolder mt-1 mb-4 section-title-sm">
           MAHESH MADURANGA
         </h2>
         <img
           src="images\team\md.png"
           alt="Mahesh Maduranga"
-          style="width: 175px; height: 175px; object-fit: cover; border-radius: 10px; border: 4px solid #eee;"
+          class="team-portrait"
         />
       </div>
 
       <!-- Team Members heading -->
       <div class="text-center mb-4">
         <div class="sec-label justify-content-center">Our Team</div>
-        <h2 class="fw-bolder mt-1" style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--dark);">
+        <h2 class="fw-bolder mt-1 section-title-sm">
           Meet our Amazing<br>Team Members
         </h2>
       </div>
@@ -428,7 +428,8 @@
         <button class="carousel-control-prev team-arrow team-arrow-prev"
                 type="button"
                 data-bs-target="#teamCarousel"
-                data-bs-slide="prev">
+          data-bs-slide="prev"
+          aria-label="Previous team members">
           <span class="team-arrow-icon"><i class="bi bi-chevron-left"></i></span>
         </button>
 
@@ -436,7 +437,8 @@
         <button class="carousel-control-next team-arrow team-arrow-next"
                 type="button"
                 data-bs-target="#teamCarousel"
-                data-bs-slide="next">
+          data-bs-slide="next"
+          aria-label="Next team members">
           <span class="team-arrow-icon"><i class="bi bi-chevron-right"></i></span>
         </button>
 
@@ -451,12 +453,12 @@
        SECTION 8: SUBSIDIARIES (Brother Companies)
        Logo image above company name. No card border.
   ============================================= -->
-  <section id="subsidiaries" class="py-5" style="background: #f9f9f9;">
+  <section id="subsidiaries" class="py-5 section-bg-light">
     <div class="container py-4">
 
       <div class="text-center mb-5">
         <div class="sec-label justify-content-center">Brother Companies</div>
-        <h2 class="fw-bolder mt-1" style="font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--dark);">
+        <h2 class="fw-bolder mt-1 section-title-lg">
           Check out our Subsidiaries
         </h2>
       </div>
@@ -469,10 +471,9 @@
             <img
               src="https://ozoconstruction.com/wp-content/uploads/elementor/thumbs/Logo-Design-03-q8q9w465044fki7qrahl1mpnpa82naz34zacqf531w.jpg"
               alt="OZO Interior Design"
-              class="img-fluid mb-3"
-              style="max-height: 90px; object-fit: contain;"
+              class="img-fluid mb-3 sub-logo"
             />
-            <h6 class="fw-bold mb-1" style="font-size: 0.95rem;">
+            <h6 class="fw-bold mb-1 card-title-sm">
               Ozo Interior Design &amp; Aluminium. (Pvt) Ltd
             </h6>
             <small class="text-muted">Reg. No :- PV 00242560</small>
@@ -485,10 +486,9 @@
             <img
               src="https://ozoconstruction.com/wp-content/uploads/elementor/thumbs/Logo-Design-04-q8q9w61tds707q50gbau6m8kw1yt2p6jt8lboz2apg.jpg"
               alt="Sigiri Colombo Alo Fabrication"
-              class="img-fluid mb-3"
-              style="max-height: 90px; object-fit: contain;"
+              class="img-fluid mb-3 sub-logo"
             />
-            <h6 class="fw-bold mb-1" style="font-size: 0.95rem;">
+            <h6 class="fw-bold mb-1 card-title-sm">
               Sigiri Colombo Alo Fabrication
             </h6>
             <small class="text-muted">Reg. No :- 2/7/120/2017-04-27/7</small>
@@ -512,7 +512,7 @@
       <!-- Heading -->
       <div class="text-center mb-5">
         <div class="sec-label justify-content-center">Customer Say</div>
-        <h2 class="fw-bolder mt-1" style="font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--dark);">
+        <h2 class="fw-bolder mt-1 section-title-lg">
           Client's Testimonial
         </h2>
       </div>
@@ -527,13 +527,13 @@
               <img src="https://ozoconstruction.com/wp-content/uploads/2023/06/IMG-20230626-WA0018.jpg"
                    alt="Wind Force" class="testi-logo" />
               <div>
-                <strong style="font-size: 0.95rem;">Wind Force</strong>
-                <div class="text-muted" style="font-size: 0.78rem; color: var(--yellow) !important;">Executive</div>
+                <strong class="testi-name">Wind Force</strong>
+                <div class="text-muted testi-role">Executive</div>
                 <div class="testi-divider"></div>
                 <div class="testi-stars">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
               </div>
             </div>
-            <p class="mt-3 mb-0 text-muted" style="font-size: 0.87rem; line-height: 1.65;">
+            <p class="mt-3 mb-0 text-muted section-text-compact">
               I was so impressed with how well our project was coordinated. Everyone
               on the team was always available to answer my questions, and they were
               always willing to go the extra mile to make sure everything was done right.
@@ -548,13 +548,13 @@
               <img src="https://ozoconstruction.com/wp-content/uploads/2023/06/IMG-20230626-WA0019.jpg"
                    alt="George Steuart" class="testi-logo" />
               <div>
-                <strong style="font-size: 0.95rem;">George Steuart</strong>
-                <div class="text-muted" style="font-size: 0.78rem; color: var(--yellow) !important;">Executive</div>
+                <strong class="testi-name">George Steuart</strong>
+                <div class="text-muted testi-role">Executive</div>
                 <div class="testi-divider"></div>
                 <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               </div>
             </div>
-            <p class="mt-3 mb-0 text-muted" style="font-size: 0.87rem; line-height: 1.65;">
+            <p class="mt-3 mb-0 text-muted section-text-compact">
               I was really worried about going over budget, but ozo construction
               company did a great job of staying on track. They were always transparent
               about the costs, and they never made any promises they couldn't keep.
@@ -569,13 +569,13 @@
               <img src="https://ozoconstruction.com/wp-content/uploads/2023/06/IMG-20230626-WA0017.jpg"
                    alt="Doyoda" class="testi-logo" />
               <div>
-                <strong style="font-size: 0.95rem;">Doyoda</strong>
-                <div style="font-size: 0.78rem; color: var(--yellow);">Executive</div>
+                <strong class="testi-name">Doyoda</strong>
+                <div class="testi-role">Executive</div>
                 <div class="testi-divider"></div>
                 <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
               </div>
             </div>
-            <p class="mt-3 mb-0 text-muted" style="font-size: 0.87rem; line-height: 1.65;">
+            <p class="mt-3 mb-0 text-muted section-text-compact">
               I was so happy with the final product. Ozo construction company did a
               great job of listening to my needs and incorporating my ideas. I couldn't
               be happier with the way my project turned out.
@@ -596,13 +596,13 @@
               <img src="https://ozoconstruction.com/wp-content/uploads/2023/06/IMG-20230626-WA0020.jpg"
                    alt="Thilakawardhana" class="testi-logo" />
               <div>
-                <strong style="font-size: 0.95rem;">Thilakawardhana</strong>
-                <div style="font-size: 0.78rem; color: var(--yellow);">Executive</div>
+                <strong class="testi-name">Thilakawardhana</strong>
+                <div class="testi-role">Executive</div>
                 <div class="testi-divider"></div>
                 <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               </div>
             </div>
-            <p class="mt-3 mb-0 text-muted" style="font-size: 0.87rem; line-height: 1.65;">
+            <p class="mt-3 mb-0 text-muted section-text-compact">
               Ozo Construction exceeded our expectations with their exceptional
               craftsmanship and attention to detail. Our dream home turned out even
               better than we imagined, and we couldn't be happier with the result.
@@ -617,13 +617,13 @@
               <img src="https://ozoconstruction.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-26-at-20.50.15.jpg"
                    alt="KFC" class="testi-logo" />
               <div>
-                <strong style="font-size: 0.95rem;">KFC</strong>
-                <div style="font-size: 0.78rem; color: var(--yellow);">Executive</div>
+                <strong class="testi-name">KFC</strong>
+                <div class="testi-role">Executive</div>
                 <div class="testi-divider"></div>
                 <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               </div>
             </div>
-            <p class="mt-3 mb-0 text-muted" style="font-size: 0.87rem; line-height: 1.65;">
+            <p class="mt-3 mb-0 text-muted section-text-compact">
               Working with Ozo Construction was an absolute pleasure from start to
               finish. Their team was professional, reliable, and communicated with us
               every step of the way. The project was completed on time and within budget.
@@ -638,13 +638,13 @@
               <img src="https://ozoconstruction.com/wp-content/uploads/2023/06/IMG-20230626-WA0021.jpg"
                    alt="CPG" class="testi-logo" />
               <div>
-                <strong style="font-size: 0.95rem;">CPG</strong>
-                <div style="font-size: 0.78rem; color: var(--yellow);">Executive</div>
+                <strong class="testi-name">CPG</strong>
+                <div class="testi-role">Executive</div>
                 <div class="testi-divider"></div>
                 <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
               </div>
             </div>
-            <p class="mt-3 mb-0 text-muted" style="font-size: 0.87rem; line-height: 1.65;">
+            <p class="mt-3 mb-0 text-muted section-text-compact">
               Ozo Construction transformed our outdated space into a modern and
               functional environment. They listened to our ideas, offered valuable
               suggestions, and brought our vision to life.
@@ -670,7 +670,7 @@
 
         <!-- Left: text + button -->
         <div class="col-md-6">
-          <h3 class="fw-bold mb-4" style="color: var(--dark); font-size: clamp(1.4rem, 2.5vw, 1.9rem); line-height: 1.35;">
+          <h3 class="fw-bold mb-4 section-title-md">
             Looking For A Quality And Affordable
             constructor For Your
             <strong class="fw-bolder">Next Project?</strong>

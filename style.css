@@ -34,6 +34,95 @@ body {
   flex-shrink: 0;
 }
 
+.section-title-lg {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--dark);
+}
+
+.section-title-xl {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: #fff;
+}
+
+.section-title-lg-tight {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.section-title-md {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--dark);
+  line-height: 1.35;
+}
+
+.section-title-sm {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--dark);
+}
+
+.section-text {
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+.section-text-wide {
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.section-text-compact {
+  font-size: 0.87rem;
+  line-height: 1.65;
+}
+
+.section-label-highlight {
+  color: var(--yellow);
+}
+
+.section-bg-dark {
+  background: var(--dark);
+}
+
+.section-bg-light {
+  background: #f9f9f9;
+}
+
+.section-label-yellow {
+  color: var(--yellow);
+}
+
+.card-title-sm {
+  font-size: 0.95rem;
+}
+
+.team-portrait {
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 4px solid #eee;
+}
+
+.sub-logo {
+  max-height: 90px;
+  object-fit: contain;
+}
+
+.testi-name {
+  font-size: 0.95rem;
+}
+
+.testi-role {
+  font-size: 0.78rem;
+  color: var(--yellow) !important;
+}
+
+.svc-fallback-icon {
+  font-size: 3.5rem;
+  color: var(--dark);
+}
+
 
 /* =============================================
    NAVBAR
@@ -44,13 +133,21 @@ body {
   box-shadow: none;
   padding: 6px 0;
 }
+.navbar-nav{
+    align-items: center;
+}
 
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 /* Logo — taller like real site */
 #navbar .navbar-brand img { height: 80px; }
 
 /* Dot separator between links */
 #navbar .nav-item:not(:last-child)::after {
-  content: "·";
+  content: "";
   color: #bbb;
   font-size: 1.1rem;
   line-height: 1;
