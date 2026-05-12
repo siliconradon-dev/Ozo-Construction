@@ -1,0 +1,731 @@
+/* =============================================
+   GLOBAL
+============================================= */
+:root {
+  --yellow : #f5c518;
+  --dark   : #0d1f3c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Barlow", sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* Yellow-bar section label */
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 10px;
+}
+.sec-label::before {
+  content: "";
+  width: 32px;
+  height: 3px;
+  background: var(--yellow);
+  flex-shrink: 0;
+}
+
+
+/* =============================================
+   NAVBAR
+============================================= */
+#navbar {
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;  /* subtle line — no heavy shadow */
+  box-shadow: none;
+  padding: 6px 0;
+}
+
+/* Logo — taller like real site */
+#navbar .navbar-brand img { height: 80px; }
+
+/* Dot separator between links */
+#navbar .nav-item:not(:last-child)::after {
+  content: "·";
+  color: #bbb;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+}
+
+#navbar .nav-link {
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.8px;
+  color: var(--dark);           /* dark navy — inactive */
+  padding: 6px 10px;
+  transition: color 0.2s;
+}
+
+/* Hover → blue like real site */
+#navbar .nav-link:hover { color: #1a5fa8; }
+
+/* Active page → blue bold */
+#navbar .nav-link.active {
+  color: #1a5fa8;
+  font-weight: 800;
+}
+
+@media (max-width: 991px) {
+  #navbar .nav-item::after { display: none; }
+  #navbar .navbar-brand img { height: 52px; }
+}
+
+
+/* =============================================
+   HERO  (index.html only)
+============================================= */
+#hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px;
+}
+
+#heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#heroFallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark overlay */
+#hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.28);
+  z-index: 1;
+}
+
+#hero .hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Typing animation */
+#heroHeading {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid var(--yellow);
+  width: 0;
+  animation:
+    typeIt 2.4s steps(15) 0.6s forwards,
+    blink  0.75s step-end infinite;
+}
+
+@keyframes typeIt { to { width: 15ch; } }
+@keyframes blink  { 50% { border-color: transparent; } }
+
+@media (max-width: 575px) {
+  #hero { min-height: 60vh; padding-bottom: 44px; }
+  #heroHeading { font-size: 2.2rem; }
+}
+
+
+/* =============================================
+   ABOUT SECTION  (index.html)
+============================================= */
+.stat-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--yellow);
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .stat-num { font-size: 2.2rem; }
+}
+
+
+/* =============================================
+   EXPECTATIONS — hover turns card white
+============================================= */
+.exp-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  cursor: default;
+  height: 100%;
+}
+.exp-card:hover                { background: #fff; border-color: #fff; color: #222; }
+.exp-card:hover h5             { color: #111; }
+.exp-card:hover p              { color: #555; opacity: 1; }
+
+.exp-icon {
+  width: 72px;
+  height: 72px;
+  background: rgba(255,255,255,0.13);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 2.2rem;
+  color: #fff;
+  transition: background 0.25s;
+}
+.exp-card:hover .exp-icon { background: var(--yellow); color: #111; }
+
+
+/* =============================================
+   SERVICES — hover shows shadow + arrow
+============================================= */
+.svc-card {
+  text-align: center;
+  padding: 36px 20px 28px;
+  border-radius: 8px;
+  transition: box-shadow 0.25s;
+  cursor: default;
+}
+.svc-card:hover { box-shadow: 0 10px 34px rgba(0,0,0,0.11); }
+
+.svc-card img.svc-icon {
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.svc-card h6 {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  color: var(--dark);
+}
+
+/* Arrow button: hidden until card hover */
+.svc-card .arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #e8e8e8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s, transform 0.25s, background 0.2s;
+}
+.svc-card:hover .arrow-btn {
+  opacity: 1;
+  transform: translateY(0);
+  background: var(--yellow);
+}
+
+
+/* =============================================
+   HEAVY MACHINES CTA — yellow pill button
+============================================= */
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--yellow);
+  color: #111;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 50px;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+}
+.pill-btn span.pill-text { padding: 13px 22px 13px 28px; }
+.pill-btn .pill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin: 4px 4px 4px 0;
+  transition: background 0.25s;
+}
+.pill-btn:hover { background: #fff; color: var(--dark); box-shadow: 0 6px 22px rgba(0,0,0,0.18); }
+.pill-btn:hover .pill-icon { background: var(--yellow); }
+
+
+/* =============================================
+   TEAM CAROUSEL
+============================================= */
+#teamCarousel {
+  position: relative;
+  padding: 0 50px;
+}
+
+.team-card {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.team-img {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eee;
+  transition: border-color 0.25s;
+}
+.team-card:hover .team-img { border-color: var(--yellow); }
+
+.team-role {
+  font-size: 0.72rem;
+  line-height: 1.55;
+  margin-top: 4px;
+}
+
+/* Prev / Next arrows */
+.team-arrow {
+  width: 42px;
+  height: 42px;
+  background: #fff !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 50% !important;
+  top: 50%;
+  transform: translateY(-60%);
+  opacity: 1 !important;
+  transition: background 0.2s, border-color 0.2s;
+}
+.team-arrow:hover {
+  background: var(--yellow) !important;
+  border-color: var(--yellow) !important;
+}
+.team-arrow-prev { left: 0; }
+.team-arrow-next { right: 0; }
+
+.team-arrow-icon {
+  color: var(--dark);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-arrow:hover .team-arrow-icon { color: #111; }
+
+/* Indicator dots */
+.team-dots { bottom: 0; gap: 6px; }
+.team-dots button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: #ddd !important;
+  border: none !important;
+  opacity: 1 !important;
+  transition: background 0.2s;
+}
+.team-dots button.active { background: var(--yellow) !important; }
+
+@media (max-width: 575px) {
+  #teamCarousel { padding: 0 40px; }
+  .team-img { width: 90px; height: 90px; }
+}
+
+
+/* =============================================
+   TESTIMONIALS — row hover adds shadow
+============================================= */
+.testi-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 24px;
+  height: 100%;
+  background: #fff;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+.testi-row:hover .testi-card {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09);
+  border-color: transparent;
+}
+
+.testi-logo {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.testi-stars {
+  color: var(--yellow);
+  font-size: 0.9rem;
+  margin-top: 3px;
+}
+
+.testi-divider {
+  width: 30px;
+  height: 2px;
+  background: var(--yellow);
+  margin: 4px 0 8px;
+}
+
+
+/* =============================================
+   CTA BANNER — dot grid background
+============================================= */
+#ctaBanner {
+  position: relative;
+  overflow: hidden;
+  background: #f4f6fa;
+}
+#ctaBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#c4c9d4 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.5;
+  z-index: 0;
+}
+#ctaBanner > .container { position: relative; z-index: 1; }
+
+.cta-crane {
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+}
+
+.btn-cta {
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 34px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-cta:hover { background: #1b3560; color: #fff; }
+
+@media (max-width: 767px) {
+  .cta-crane { max-height: 200px; margin-top: 24px; }
+}
+
+
+/* =============================================
+   FOOTER
+============================================= */
+#footer { background: #fff; padding-top: 56px; }
+
+.footer-logo {
+  height: 70px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.footer-desc { font-size: 0.88rem; color: #666; line-height: 1.7; }
+
+/* Social icon buttons */
+.soc-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  color: #666;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.soc-btn:hover { background: var(--yellow); border-color: var(--yellow); color: #111; }
+
+.footer-heading {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111;
+  border-left: 3px solid var(--yellow);
+  padding-left: 10px;
+  margin-bottom: 18px;
+}
+
+.f-list { list-style: none; padding: 0; margin: 0; }
+.f-list li {
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 10px;
+  padding-left: 16px;
+  position: relative;
+}
+.f-list li::before {
+  content: "■";
+  color: var(--yellow);
+  font-size: 0.45rem;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.f-list li a { color: #555; text-decoration: none; transition: color 0.2s; }
+.f-list li a:hover { color: var(--yellow); }
+
+/* Newsletter input */
+.nl-wrap { position: relative; }
+.nl-wrap input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  padding: 11px 50px 11px 20px;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.nl-wrap input:focus { border-color: var(--yellow); }
+.nl-wrap button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--yellow);
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.footer-bar {
+  background: var(--dark);
+  color: rgba(255,255,255,0.65);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 50px;
+}
+
+
+/* =============================================
+   BACK TO TOP BUTTON
+============================================= */
+#backTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  background: var(--yellow);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#backTop:hover { transform: translateY(-3px); }
+
+
+/* =============================================
+   CONTACT PAGE — specific styles
+============================================= */
+
+/* Underline-only form inputs */
+.contact-form .form-field {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  width: 100%;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.contact-form .form-field:focus { border-bottom-color: var(--yellow); }
+.contact-form .form-field::placeholder { color: #aaa; }
+.contact-form textarea.form-field { resize: vertical; min-height: 80px; }
+
+/* File input */
+.contact-form .file-wrap { border-bottom: 1px solid #ccc; padding: 10px 0; }
+.contact-form input[type="file"] { font-size: 0.88rem; color: #666; }
+
+/* Yellow submit pill */
+.btn-submit-yellow {
+  background: var(--yellow);
+  color: #111;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 48px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-submit-yellow:hover { background: #e6b800; box-shadow: 0 4px 14px rgba(245,197,24,0.4); }
+
+/* Google map iframe */
+.map-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border: 0;
+  display: block;
+}
+
+/* Info cards (Address / Contact / Hours) */
+.info-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 28px 20px;
+}
+.info-bar {
+  width: 4px;
+  min-height: 44px;
+  align-self: stretch;
+  border-radius: 2px;
+  background: var(--yellow);
+  flex-shrink: 0;
+}
+.info-card h6 { font-weight: 700; font-size: 0.92rem; color: #111; margin-bottom: 6px; }
+.info-card p  { font-size: 0.9rem; color: #555; margin: 0; line-height: 1.65; }
+
+@media (max-width: 767px) {
+  .map-frame { min-height: 300px; }
+}
+
+
+/* =============================================
+   ABOUT PAGE — specific styles
+============================================= */
+
+/* 2-column checkmark service list */
+.service-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  margin-top: 24px;
+}
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+.service-list li i { color: var(--yellow); font-size: 1rem; flex-shrink: 0; }
+
+/* YouTube embed responsive wrapper */
+.yt-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.yt-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Full-width dark MD quote section */
+.quote-section {
+  background: var(--dark);
+  padding: 80px 0;
+  text-align: center;
+}
+.quote-mark {
+  font-size: 5rem;
+  color: var(--yellow);
+  line-height: 0.8;
+  font-family: Georgia, serif;
+  margin-bottom: 20px;
+  display: block;
+}
+.quote-text {
+  color: #fff;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1.85;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+.quote-name  { color: var(--yellow); font-weight: 800; font-size: 1rem; }
+.quote-title { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
+
+/* Client logo cards (square white boxes) */
+.client-logo-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+  height: 120px;
+}
+.client-logo-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.1); }
+.client-logo-card img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Subsidiary cards */
+.sub-card {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  transition: box-shadow 0.25s;
+}
+.sub-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.11); }
+.sub-card img { max-height: 85px; object-fit: contain; margin-bottom: 14px; }
