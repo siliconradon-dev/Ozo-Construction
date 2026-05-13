@@ -576,6 +576,20 @@ body {
 
 @media (max-width: 767px) {
   #ctaBanner { min-height: 0; overflow: hidden; padding: 40px 0 20px; }
+  #ctaBanner .cta-copy {
+    max-width: 16rem;
+    margin: 0 auto;
+  }
+  #ctaBanner .cta-heading {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+  #ctaBanner .cta-btn {
+    display: inline-flex;
+    justify-content: center;
+    min-width: 8.5rem;
+  }
   .cta-crane {
     position: relative;
     top: auto; right: auto; bottom: auto; left: auto;
