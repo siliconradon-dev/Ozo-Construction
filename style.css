@@ -14,6 +14,23 @@ body {
   overflow-x: hidden;
 }
 
+p,
+li,
+.section-text-wide,
+.section-text-compact,
+.footer-desc,
+.quote-text,
+.info-card p,
+.testi-card p,
+.exp-card p,
+.fs-6,
+.lh-lg {
+  text-align: justify !important;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
 /* Yellow-bar section label */
 .sec-label {
   display: flex;
@@ -64,11 +81,17 @@ body {
 .section-text-wide {
   font-size: 0.95rem;
   line-height: 1.75;
+  text-align: justify !important;  
+  overflow-wrap: break-word;        
+  hyphens: auto;  
 }
 
 .section-text-compact {
   font-size: 0.87rem;
   line-height: 1.65;
+  text-align: justify !important;  
+  overflow-wrap: break-word;      
+  hyphens: auto;  
 }
 
 .section-label-highlight {
@@ -266,6 +289,8 @@ body {
 /* =============================================
    ABOUT SECTION  (index.html)
 ============================================= */
+.clients-heading { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--dark); line-height: 1.2; }
+.about-heading   { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--dark); line-height: 1.2; font-weight: 900; }  
 .stat-num {
   font-size: 3rem;
   font-weight: 900;
@@ -485,6 +510,9 @@ body {
   height: 100%;
   background: #fff;
   transition: box-shadow 0.25s, border-color 0.25s;
+  text-align: justify !important;  
+  overflow-wrap: break-word;       
+  hyphens: auto;                   
 }
 .testi-row:hover .testi-card {
   box-shadow: 0 8px 28px rgba(0,0,0,0.09);
@@ -640,7 +668,13 @@ body {
   margin-bottom: 14px;
 }
 
-.footer-desc { font-size: 0.88rem; color: #666; line-height: 1.7; }
+.footer-desc { 
+  font-size: 0.88rem; 
+  color: #666; 
+  line-height: 1.7; 
+  text-align: justify !important;  
+  overflow-wrap: break-word;        
+}
 
 /* Social icon buttons */
 .soc-btn {
@@ -803,6 +837,8 @@ body {
   gap: 16px;
   align-items: flex-start;
   padding: 28px 20px;
+    text-align: justify !important;  
+  overflow-wrap: break-word;        
 }
 .info-bar {
   width: 4px;
@@ -845,6 +881,9 @@ body {
   line-height: 1.85;
   max-width: 900px;
   margin: 0 auto 32px;
+  text-align: justify !important;  
+  overflow-wrap: break-word; 
+  hyphens: auto;       
 }
 .quote-name  { color: var(--yellow); font-weight: 800; font-size: 1rem; }
 .quote-title { color: rgba(255,255,255,0.65); font-size: 0.88rem; }
@@ -887,4 +926,36 @@ body {
   max-height: 190px;
   object-fit: contain;
   margin-bottom: 18px;
+}
+
+/* =============================================
+   MOBILE — Bootstrap not cover fixes
+============================================= */
+@media (max-width: 767px) {
+  .info-card {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 12px;
+  }
+  .info-bar {
+    width: 100%;
+    height: 3px;
+    min-height: unset;
+  }
+  .map-frame { min-height: 250px; }
+  .quote-section { padding: 40px 0; }
+  .quote-text { padding: 0 8px; }
+  .client-logo-card { height: 120px; padding: 12px; }
+}
+
+/* =============================================
+   ALL PAGES — Mobile container padding fix
+   Bootstrap default = 12px, meka = 20px (clean)
+============================================= */
+@media (max-width: 575px) {
+  .container,
+  .container-fluid {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
 }
