@@ -15,6 +15,12 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    .about-text-justify {
+      text-align: justify;
+    }
+  </style>
+
   <script src="js/hero.js" defer></script>
 
 </head>
@@ -38,13 +44,15 @@
 
       <!-- Hamburger (mobile) -->
       <button
-        class="navbar-toggler border-0"
+        class="navbar-toggler border-0 d-flex align-items-center justify-content-center collapsed"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navMenu"
+        aria-expanded="false"
         aria-label="Toggle menu"
       >
-        <span class="navbar-toggler-icon"></span>
+        <i class="bi bi-list nav-open-icon"></i>
+        <i class="bi bi-x nav-close-icon"></i>
       </button>
 
       <!-- Links -->
@@ -74,17 +82,17 @@
   <div id="heroOverlay"></div>
 
   <!-- Video 1 (active first) -->
-  <video class="hero-vid active-vid" autoplay muted playsinline>
+  <video class="hero-vid active-vid" autoplay muted>
     <source src="images/video1.mp4" type="video/mp4" />
   </video>
 
   <!-- Video 2 -->
-  <video class="hero-vid" muted playsinline>
+  <video class="hero-vid" muted>
     <source src="images/video2.mp4" type="video/mp4" />
   </video>
 
   <!-- Video 3 -->
-  <video class="hero-vid" muted playsinline>
+  <video class="hero-vid" muted>
     <source src="images/video3.mp4" type="video/mp4" />
   </video>
 
@@ -135,7 +143,7 @@
           <h2 class="fw-bolder mb-3 section-title-lg-tight">
             We Are The Leader In <br> Construction
           </h2>
-          <p class="text-muted mb-4 section-text-wide" style="text-align:justify;">
+          <p class="text-muted mb-4 section-text-wide about-text-justify">
             The company was established in November 2014 as a Construction Company
             for Commercial Buildings. For the last years, OZO Construction (Pvt) Ltd
             stood for its quality, integrity, and professionalism. We are dedicated to 

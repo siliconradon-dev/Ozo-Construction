@@ -184,6 +184,12 @@ li,
   font-weight: 800;
 }
 
+/* Hamburger toggle icons */
+.navbar-toggler .nav-open-icon  { font-size: 1.6rem; color: var(--dark); }
+.navbar-toggler .nav-close-icon { font-size: 1.6rem; color: var(--dark); display: none; }
+.navbar-toggler:not(.collapsed) .nav-open-icon { display: none; }
+.navbar-toggler:not(.collapsed) .nav-close-icon { display: inline-block; }
+
 @media (max-width: 991px) {
   #navbar .nav-item::after { display: none; }
   #navbar .navbar-brand img { height: 48px; }
