@@ -548,7 +548,7 @@ body {
 /* Crane */
 .cta-crane {
   position: absolute;
-  right: -60px;
+  right: -20px;
   bottom: 0;
   top: -93px;                /* ← testimonial last card border touch */
   height: calc(80% + 160px);
@@ -575,14 +575,15 @@ body {
 .btn-cta:hover { background: #1b3560; color: #fff; }
 
 @media (max-width: 767px) {
-  #ctaBanner { min-height: 0; overflow: hidden; padding: 40px 0; }
+  #ctaBanner { min-height: 0; overflow: hidden; padding: 40px 0 20px; }
   .cta-crane {
     position: relative;
-    top: auto; right: auto; bottom: auto;
+    top: auto; right: auto; bottom: auto; left: auto;
     height: auto;
-    max-height: 200px;
-    width: 100%;
-    margin-top: 20px;
+    max-height: 260px;
+    width: min(100%, 420px);
+    margin: 20px auto 0;
+    object-position: center bottom;
     pointer-events: auto;
   }
 }
