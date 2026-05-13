@@ -190,6 +190,16 @@ body {
 }
 .hero-vid.active-vid { opacity: 1; }
 
+#heroFallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: none;
+}
+
 #heroOverlay {
   position: absolute;
   inset: 0;
@@ -548,16 +558,21 @@ body {
 /* Crane */
 .cta-crane {
   position: absolute;
-  right: -20px;
+  right: -95px;
   bottom: 0;
-  top: -93px;                /* ← testimonial last card border touch */
-  height: calc(80% + 160px);
+  top: -56px;
+  height: calc(70% + 110px);
   width: auto;
   object-fit: contain;
   object-position: right bottom;
   display: block;
   z-index: 0;
   pointer-events: none;
+}
+
+.cta-crane-mobile img {
+  max-width: 320px;
+  width: 100%;
 }
 
 .btn-cta {
@@ -575,9 +590,9 @@ body {
 .btn-cta:hover { background: #1b3560; color: #fff; }
 
 @media (max-width: 767px) {
-  #ctaBanner { min-height: 0; overflow: hidden; padding: 40px 0 20px; }
+  #ctaBanner { min-height: 0; overflow: hidden; padding: 40px 0 28px; }
   #ctaBanner .cta-copy {
-    max-width: 16rem;
+    max-width: 18rem;
     margin: 0 auto;
   }
   #ctaBanner .cta-heading {
@@ -590,16 +605,13 @@ body {
     justify-content: center;
     min-width: 8.5rem;
   }
-  .cta-crane {
-    position: relative;
-    top: auto; right: auto; bottom: auto; left: auto;
-    height: auto;
-    max-height: 260px;
-    width: min(100%, 420px);
-    margin: 20px auto 0;
-    object-position: center bottom;
-    pointer-events: auto;
+  .cta-crane-mobile {
+    display: block;
   }
+}
+
+@media (min-width: 768px) {
+  .cta-crane-mobile { display: none; }
 }
 
 /* ADD — new tablet breakpoint */
