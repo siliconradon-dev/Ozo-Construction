@@ -154,27 +154,36 @@
   <!-- END INFO CARDS -->
 
   <!-- =============================================
-       CTA BANNER
+       SECTION 10: CTA BANNER
+       Dot-grid bg. Left: heading + button. Right: crane image.
   ============================================= -->
-  <section id="ctaBanner" class="py-5">
+    <section id="ctaBanner" class="py-5">
     <div class="container py-4">
-      <div class="row align-items-center g-4">
-        <div class="col-md-6">
+      <div class="row align-items-center">
+
+        <!-- Left: text + button (crane image behind on right) -->
+        <div class="col-md-6 col-lg-5">
           <h3 class="fw-bold mb-4 section-title-md">
-            Looking For A Quality And Affordable constructor For Your
+            Looking For A Quality And Affordable
+            constructor For Your
             <strong class="fw-bolder">Next Project?</strong>
           </h3>
-          <a href="contact.html" class="btn-cta">Contact Us</a>
+          <a href="#footer" class="btn-cta">Contact Us</a>
         </div>
-        <div class="col-md-6">
-          <img src="images\Mask-Group-9.png"
-               alt="Construction crane" class="cta-crane img-fluid"
-               onerror="this.src='https://ozoconstruction.com/wp-content/uploads/2019/01/architecture-construction-safety-first-career-PGV-1.jpg';this.style.borderRadius='8px';this.style.maxHeight='260px'" />
-        </div>
+
       </div>
     </div>
+
+    <!-- Crane image — absolute bg on right side -->
+    <img
+      src="images/Mask-Group-9.png"
+      alt="Construction crane"
+      class="cta-crane"
+      onerror="this.style.display='none'"
+    />
+
   </section>
-  <!-- END CTA BANNER -->
+    <!-- END CTA BANNER -->
 
   <!-- =============================================
        FOOTER

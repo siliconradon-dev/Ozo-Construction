@@ -119,14 +119,14 @@
   ============================================= -->
   <section id="about" class="py-5">
     <div class="container py-4">
-      <div class="row align-items-center g-5">
+      <div class="row align-items-center justify-content-between g-5">
 
         <!-- Left: image -->
         <div class="col-md-5">
           <img
             src="images\about-worker.jpg"
             alt="Construction worker on site"
-            class="img-fluid rounded"
+            class="img-fluid rounded shadow-sm"
           />
         </div>
 
@@ -134,12 +134,12 @@
         <div class="col-md-7">
           <div class="sec-label">About OZO Construction</div>
           <h2 class="fw-bolder mb-3 section-title-lg-tight">
-            We Are The Leader In Construction
+            We Are The Leader In <br> Construction
           </h2>
           <p class="text-muted mb-4 section-text-wide">
             The company was established in November 2014 as a Construction Company
             for Commercial Buildings. For the last years, OZO Construction (Pvt) Ltd
-            stood for its quality, integrity, and professionalism. We are dedicated to
+            stood for its quality, integrity, and professionalism. We are dedicated to 
             superior workmanship and adhere strictly to the budget, schedule, and
             service commitments. The company was registered on 03rd August 2021.
           </p>
@@ -687,32 +687,31 @@
        Dot-grid bg. Left: heading + button. Right: crane image.
   ============================================= -->
   <section id="ctaBanner" class="py-5">
-    <div class="container py-4">
-      <div class="row align-items-center g-4">
+  <div class="container py-4">
+    <div class="row align-items-center">
 
-        <!-- Left: text + button -->
-        <div class="col-md-6">
-          <h3 class="fw-bold mb-4 section-title-md">
-            Looking For A Quality And Affordable
-            constructor For Your
-            <strong class="fw-bolder">Next Project?</strong>
-          </h3>
-          <a href="#footer" class="btn-cta">Contact Us</a>
-        </div>
-
-        <!-- Right: crane image -->
-        <div class="col-md-6">
-          <img
-            src="images\Mask-Group-9.png"
-            alt="Construction crane"
-            class="cta-crane img-fluid"
-            onerror="this.src='https://ozoconstruction.com/wp-content/uploads/2019/01/architecture-construction-safety-first-career-PGV-1.jpg';this.style.borderRadius='8px';this.style.objectFit='cover';this.style.maxHeight='260px'"
-          />
-        </div>
-
+      <!-- Left: text + button (crane image behind on right) -->
+      <div class="col-md-6 col-lg-5">
+        <h3 class="fw-bold mb-4 section-title-md">
+          Looking For A Quality And Affordable
+          constructor For Your
+          <strong class="fw-bolder">Next Project?</strong>
+        </h3>
+        <a href="#footer" class="btn-cta">Contact Us</a>
       </div>
+
     </div>
-  </section>
+  </div>
+
+  <!-- Crane image — absolute bg on right side -->
+  <img
+    src="images/Mask-Group-9.png"
+    alt="Construction crane"
+    class="cta-crane"
+    onerror="this.style.display='none'"
+  />
+
+</section>
   <!-- END CTA BANNER -->
 
 
