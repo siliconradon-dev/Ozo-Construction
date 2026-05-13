@@ -7,8 +7,8 @@
 // Slide data — texts change karanna oka witharak
 const HERO_SLIDES = [
   { text: "Luxury Designs" },
-  { text: "Expert Builders" },
-  { text: "Quality First"  }
+  { text: "Premium Quality" },
+  { text: "Unique Interior"  }
 ];
 
 let currentSlide = 0;
