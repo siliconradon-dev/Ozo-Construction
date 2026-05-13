@@ -558,10 +558,10 @@ body {
 /* Crane */
 .cta-crane {
   position: absolute;
-  right: -95px;
+  right: -60px;
   bottom: 0;
-  top: -56px;
-  height: calc(70% + 110px);
+  top: -93px;
+  height: calc(80% + 160px);
   width: auto;
   object-fit: contain;
   object-position: right bottom;
@@ -604,6 +604,9 @@ body {
     display: inline-flex;
     justify-content: center;
     min-width: 8.5rem;
+  }
+  .cta-crane {
+    display: none;
   }
   .cta-crane-mobile {
     display: block;
