@@ -791,6 +791,11 @@ li,
   background: transparent;
   transition: border-color 0.2s;
 }
+.contact-desc{
+   text-align: justify;
+   overflow-wrap: break-word;
+   hyphens: auto;
+}
 .contact-form .form-field:focus { border-bottom-color: var(--yellow); }
 .contact-form .form-field::placeholder { color: #aaa; }
 .contact-form textarea.form-field { resize: vertical; min-height: 80px; }
