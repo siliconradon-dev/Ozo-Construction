@@ -315,7 +315,9 @@ li,
   color: var(--yellow);
   line-height: 1;
 }
-
+.about-img-col {
+  padding-right: 3rem; /* image right side space */
+}
 @media (max-width: 767px) {
   .stat-num { font-size: 2.2rem; }
 }
