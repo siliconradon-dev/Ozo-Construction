@@ -28,8 +28,8 @@
         <ul class="navbar-nav align-items-center gap-lg-1 pt-3 pt-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#services">OUR PROJECTS</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
           <li class="nav-item"><a class="nav-link active" href="blog.html">BLOG</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
         </ul>
       </div>
@@ -60,15 +60,15 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="topic-card h-100" onclick="openTopic(0)">
             <div class="topic-card-img">
-              <img src="https://ozoconstruction.com/wp-content/uploads/2019/01/construction-worker-planning-contractor-developer-PJYYTH5-1600x900.png"
+              <img src="images\blogs\card1.png"
                    onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" alt="Young Entrepreneur" />
               <span class="topic-badge">Entrepreneurship</span>
-              <span class="parts-count"><i class="bi bi-journals me-1"></i>4 Parts</span>
+              <span class="blogs-count"><i class="bi bi-journals me-1"></i>4 Blogs</span>
             </div>
             <div class="topic-card-body">
               <h5>How to Become a Successful Young Entrepreneur</h5>
               <p>Key habits, mindset shifts, and practical strategies that set young entrepreneurs apart in today's competitive landscape.</p>
-              <span class="topic-view-btn">View Parts <i class="bi bi-arrow-right"></i></span>
+              <span class="topic-view-btn">Read More <i class="bi bi-arrow-right"></i></span>
             </div>
           </div>
         </div>
@@ -76,15 +76,15 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="topic-card h-100" onclick="openTopic(1)">
             <div class="topic-card-img">
-              <img src="https://ozoconstruction.com/wp-content/uploads/2018/04/asset-16-1600x900.png"
+              <img src="images\blogs\card2.png"
                    onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80'" alt="Entrepreneur" />
               <span class="topic-badge">Business</span>
-              <span class="parts-count"><i class="bi bi-journals me-1"></i>5 Parts</span>
+              <span class="blogs-count"><i class="bi bi-journals me-1"></i>5 Blogs</span>
             </div>
             <div class="topic-card-body">
               <h5>Become a Successful Entrepreneur</h5>
               <p>Fundamentals of building a thriving business — from crafting a compelling vision to executing with discipline.</p>
-              <span class="topic-view-btn">View Parts <i class="bi bi-arrow-right"></i></span>
+              <span class="topic-view-btn">Read More <i class="bi bi-arrow-right"></i></span>
             </div>
           </div>
         </div>
@@ -92,15 +92,15 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="topic-card h-100" onclick="openTopic(2)">
             <div class="topic-card-img">
-              <img src="https://ozoconstruction.com/wp-content/uploads/2018/04/asset-8-1600x900.png"
+              <img src="images\blogs\card3.png"
                    onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80'" alt="Critical Thinking" />
               <span class="topic-badge">Skills</span>
-              <span class="parts-count"><i class="bi bi-journals me-1"></i>3 Parts</span>
+              <span class="blogs-count"><i class="bi bi-journals me-1"></i>3 Blogs</span>
             </div>
             <div class="topic-card-body">
               <h5>Developing Your Critical Thinking Skills</h5>
               <p>Practical techniques to sharpen your analytical abilities — from systems thinking to cognitive bias awareness.</p>
-              <span class="topic-view-btn">View Parts <i class="bi bi-arrow-right"></i></span>
+              <span class="topic-view-btn">Read More <i class="bi bi-arrow-right"></i></span>
             </div>
           </div>
         </div>
@@ -108,15 +108,15 @@
         <div class="col-12 col-md-6 col-lg-3">
           <div class="topic-card h-100" onclick="openTopic(3)">
             <div class="topic-card-img">
-              <img src="https://ozoconstruction.com/wp-content/uploads/2018/04/building-in-progress-and-crane-machinery-K37BCN8-1600x900.png"
+              <img src="images\blogs\card4.png"
                    onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'" alt="Professional" />
               <span class="topic-badge">Professional</span>
-              <span class="parts-count"><i class="bi bi-journals me-1"></i>5 Parts</span>
+              <span class="blogs-count"><i class="bi bi-journals me-1"></i>5 Blogs</span>
             </div>
             <div class="topic-card-body">
               <h5>In a Professional Context It Often Happens</h5>
               <p>Navigating the nuances of professional environments — how to handle complex situations with confidence.</p>
-              <span class="topic-view-btn">View Parts <i class="bi bi-arrow-right"></i></span>
+              <span class="topic-view-btn">Read More <i class="bi bi-arrow-right"></i></span>
             </div>
           </div>
         </div>
@@ -130,9 +130,9 @@
     <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
       <div class="modal-content">
 
-        <!-- VIEW 1: Parts List -->
-        <div id="viewParts">
-          <div class="modal-parts-header">
+        <!-- VIEW 1: Blogs List -->
+        <div id="viewblogs">
+          <div class="modal-blogs-header">
             <div class="d-flex align-items-start justify-content-between gap-3">
               <div>
                 <h5 class="modal-title" id="topicModalTitle"></h5>
@@ -141,13 +141,13 @@
               <button type="button" class="btn-close flex-shrink-0 mt-1" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
           </div>
-          <div class="parts-list-body" id="partsListBody"></div>
+          <div class="blogs-list-body" id="blogsListBody"></div>
         </div>
 
         <!-- VIEW 2: Article Reader -->
         <div id="viewArticle" style="display:none;">
           <div class="article-reader-header">
-            <button class="back-btn" onclick="backToList()" title="Back to parts">
+            <button class="back-btn" onclick="backToList()" title="Back to blogs">
               <i class="bi bi-arrow-left"></i>
             </button>
             <span class="art-title" id="articleReaderTitle"></span>
@@ -159,6 +159,37 @@
       </div>
     </div>
   </div>
+
+  <!-- =============================================
+       SECTION 10: CTA BANNER
+       Dot-grid bg. Left: heading + button. Right: crane image.
+  ============================================= -->
+<section id="ctaBanner" class="py-5">
+  <div class="container position-relative">
+    <div class="row">
+
+      <!-- Left: text + button -->
+      <div class="col-12 col-md-6 py-4 text-center text-md-start">
+        <h3 class="fw-bold mb-4 section-title-md">
+          Looking For A Quality And Affordable
+          constructor For Your
+          <strong class="fw-bolder">Next Project?</strong>
+        </h3>
+        <a href="#footer" class="btn-cta">Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Crane — absolute positioned -->
+  <img
+    src="images/Mask-Group-9.png"
+    alt="Construction crane"
+    class="cta-crane-img"
+    onerror="this.style.display='none'"
+  />
+</section>
+  <!-- END CTA BANNER -->
 
   <!-- FOOTER -->
   <footer id="footer">
@@ -217,69 +248,68 @@
   <script>
 
   // ── Real content fetched from ozoconstruction.com ──
-  const REAL_CONTENT = `<p>When, while the lovely valley teems with vapor around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, 
-    and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand 
-    unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, 
-    then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity 
-    of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often 
-    think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the mirror of my soul, as my soul 
+  const REAL_CONTENT = `<p>When, while the lovely valley teems with vapor around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees,
+    and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand
+    unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies,
+    then I feel the presence of the Almighty, who formed us in his own image, and the breath of that universal love which bears and sustains us, as it floats around us in an eternity
+    of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often
+    think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the mirror of my soul, as my soul
     is the mirror of the infinite God!</p>
-
-<p>O my friend — but it is too much for my strength — I sink under the weight of the splendor of these visions! A wonderful serenity has taken possession of my entire soul, like these 
+    <p>O my friend — but it is too much for my strength — I sink under the weight of the splendor of these visions! A wonderful serenity has taken possession of my entire soul, like these
     sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
-<p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the 
+    <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the
     present moment; and yet I feel that I never was a greater artist than now.</p>
-<p>When, while the lovely valley teems with vapor around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the 
-    inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the 
-    little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, 
-    and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth 
-    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all 
+    <p>When, while the lovely valley teems with vapor around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the
+    inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the
+    little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image,
+    and the breath of that universal love which bears and sustains us, as it floats around us in an eternity of bliss; and then, my friend, when darkness overspreads my eyes, and heaven and earth
+    seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all
     that is living so full and warm within me.</p>`;
 
   const topics = [
     {
       title: "How to Become a Successful Young Entrepreneur",
-      desc: "4-part series on building an entrepreneurial mindset from a young age.",
+      desc: "4-blog series on building an entrepreneurial mindset from a young age.",
       category: "Entrepreneurship",
-      parts: [
-        { label:"Part 1", date:"April 11, 2019", title:"How to Become a Successful Young Entrepreneur",          img:"https://ozoconstruction.com/wp-content/uploads/2019/01/construction-worker-planning-contractor-developer-PJYYTH5-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 2", date:"April 11, 2018", title:"How to Become a Successful Young Entrepreneur – Part 2", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-15-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 3", date:"April 11, 2018", title:"How to Become a Successful Young Entrepreneur – Part 3", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-10-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 4", date:"April 11, 2018", title:"How to Become a Successful Young Entrepreneur – Part 4", img:"https://ozoconstruction.com/wp-content/uploads/2019/01/192521-OXNZ2V-46-1600x900.png", body: REAL_CONTENT }
+      blogs: [
+        { label:"Blog 1", date:"April 11, 2019", title:"How to Become a Successful Young Entrepreneur",          img:"images/blogs/young1.png", body: REAL_CONTENT },
+        { label:"Blog 2", date:"April 11, 2018", title:"How to Become a Successful Young Entrepreneur – Blog 2", img:"images/blogs/young2.png", body: REAL_CONTENT },
+        { label:"Blog 3", date:"April 11, 2018", title:"How to Become a Successful Young Entrepreneur – Blog 3", img:"images/blogs/young3.png", body: REAL_CONTENT },
+        { label:"Blog 4", date:"April 11, 2018", title:"How to Become a Successful Young Entrepreneur – Blog 4", img:"images/blogs/young4.png", body: REAL_CONTENT }
       ]
     },
     {
       title: "Become a Successful Entrepreneur",
-      desc: "5-part series on the foundations of building a lasting, impactful enterprise.",
+      desc: "5-blog series on the foundations of building a lasting, impactful enterprise.",
       category: "Business",
-      parts: [
-        { label:"Part 1", date:"April 11, 2018", title:"Become a Successful Entrepreneur",          img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-16-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 2", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Part 2", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/portrait-of-construction-engineers-working-on-XRKS6F2-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 3", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Part 3", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-13-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 4", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Part 4", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/architecture-construction-safety-first-career-PGV9U8Y-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 5", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Part 5", img:"https://ozoconstruction.com/wp-content/uploads/2019/01/joel-filipe-166058-unsplash-1-e1547983113414-1600x900.png", body: REAL_CONTENT }
+      blogs: [
+        { label:"Blog 1", date:"April 11, 2018", title:"Become a Successful Entrepreneur",          img:"images/blogs/entrepreneur1.png", body: REAL_CONTENT },
+        { label:"Blog 2", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Blog 2", img:"images/blogs/entrepreneur2.png", body: REAL_CONTENT },
+        { label:"Blog 3", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Blog 3", img:"images/blogs/entrepreneur3.png", body: REAL_CONTENT },
+        { label:"Blog 4", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Blog 4", img:"images/blogs/entrepreneur4.png", body: REAL_CONTENT },
+        { label:"Blog 5", date:"April 11, 2018", title:"Become a Successful Entrepreneur – Blog 5", img:"images/blogs/entrepreneur5.png", body: REAL_CONTENT }
       ]
     },
     {
       title: "Developing Your Critical Thinking Skills",
-      desc: "3-part series on building sharper, more structured analytical thinking.",
+      desc: "3-blog series on building sharper, more structured analytical thinking.",
       category: "Skills",
-      parts: [
-        { label:"Part 1", date:"April 11, 2018", title:"Developing Your Critical Thinking Skills",          img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-8-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 2", date:"April 11, 2018", title:"Developing Your Critical Thinking Skills – Part 2", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-1-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 3", date:"April 11, 2018", title:"Developing Your Critical Thinking Skills – Part 3", img:"https://ozoconstruction.com/wp-content/uploads/2019/01/pixasquare-622732-unsplash-1-1600x900.png", body: REAL_CONTENT }
+      blogs: [
+        { label:"Blog 1", date:"April 11, 2018", title:"Developing Your Critical Thinking Skills",          img:"images/blogs/critical1.png", body: REAL_CONTENT },
+        { label:"Blog 2", date:"April 11, 2018", title:"Developing Your Critical Thinking Skills – Blog 2", img:"images/blogs/critical2.png", body: REAL_CONTENT },
+        { label:"Blog 3", date:"April 11, 2018", title:"Developing Your Critical Thinking Skills – Blog 3", img:"images/blogs/critical3.png", body: REAL_CONTENT }
       ]
     },
     {
       title: "In a Professional Context It Often Happens",
-      desc: "5-part series on navigating real-world professional challenges with confidence.",
+      desc: "5-blog series on navigating real-world professional challenges with confidence.",
       category: "Professional",
-      parts: [
-        { label:"Part 1", date:"April 11, 2018", title:"In a Professional Context It Often Happens",          img:"https://ozoconstruction.com/wp-content/uploads/2018/04/building-in-progress-and-crane-machinery-K37BCN8-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 2", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Part 2", img:"https://ozoconstruction.com/wp-content/uploads/2019/01/portrait-of-construction-engineers-working-on-J9KU7NC-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 3", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Part 3", img:"https://ozoconstruction.com/wp-content/uploads/2018/04/asset-11-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 4", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Part 4", img:"https://ozoconstruction.com/wp-content/uploads/2019/01/9-1600x900.png", body: REAL_CONTENT },
-        { label:"Part 5", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Part 5", img:"https://ozoconstruction.com/wp-content/uploads/2019/01/blueprint-architect-career-structure-construction-PCCNUB5-1600x900.png", body: REAL_CONTENT }
+      blogs: [
+        { label:"Blog 1", date:"April 11, 2018", title:"In a Professional Context It Often Happens",          img:"images/blogs/happens1.png", body: REAL_CONTENT },
+        { label:"Blog 2", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Blog 2", img:"images/blogs/happens2.png", body: REAL_CONTENT },
+        { label:"Blog 3", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Blog 3", img:"images/blogs/happens3.png", body: REAL_CONTENT },
+        { label:"Blog 4", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Blog 4", img:"images/blogs/happens4.png", body: REAL_CONTENT },
+        { label:"Blog 5", date:"April 11, 2018", title:"In a Professional Context It Often Happens – Blog 5", img:"images/blogs/happens5.png", body: REAL_CONTENT }
       ]
     }
   ];
@@ -289,62 +319,62 @@
   function openTopic(idx) {
     const topic = topics[idx];
     document.getElementById('topicModalTitle').textContent = topic.title;
-    document.getElementById('topicModalDesc').textContent = topic.desc;
+    document.getElementById('topicModalDesc').textContent  = topic.desc;
 
     let html = '';
-    topic.parts.forEach((part, i) => {
+    topic.blogs.forEach((blog, i) => {
       html += `
-        <div class="part-item" onclick="openArticle(${idx},${i})">
-          <div class="part-num">${i + 1}</div>
-          <div class="part-item-text">
-            <strong>${part.title}</strong>
-            <span><i class="bi bi-calendar3 me-1"></i>${part.date}&nbsp;·&nbsp;${topic.category}</span>
+        <div class="blog-item" onclick="openArticle(${idx},${i})">
+          <div class="blog-num">${i + 1}</div>
+          <div class="blog-item-text">
+            <strong>${blog.title}</strong>
+            <span><i class="bi bi-calendar3 me-1"></i>${blog.date}&nbsp;·&nbsp;${topic.category}</span>
           </div>
-          <i class="bi bi-chevron-right part-item-arrow"></i>
+          <i class="bi bi-chevron-right blog-item-arrow"></i>
         </div>`;
     });
-    document.getElementById('partsListBody').innerHTML = html;
+    document.getElementById('blogsListBody').innerHTML = html;
 
-    document.getElementById('viewParts').style.display = '';
+    document.getElementById('viewblogs').style.display   = '';
     document.getElementById('viewArticle').style.display = 'none';
 
     if (!modalInstance) modalInstance = new bootstrap.Modal(document.getElementById('blogModal'));
     modalInstance.show();
   }
 
-  function openArticle(topicIdx, partIdx) {
+  function openArticle(topicIdx, blogIdx) {
     const topic = topics[topicIdx];
-    const part  = topic.parts[partIdx];
+    const blog  = topic.blogs[blogIdx];
 
-    document.getElementById('articleReaderTitle').textContent = part.title;
+    document.getElementById('articleReaderTitle').textContent = blog.title;
 
     document.getElementById('articleReaderBody').innerHTML = `
       <img class="article-hero-img"
-        src="${part.img}"
+        src="${blog.img}"
         onerror="this.style.display='none'"
-        alt="${part.title}" />
+        alt="${blog.title}" />
       <div class="article-meta-row">
-        <span><i class="bi bi-calendar3"></i> ${part.date}</span>
+        <span><i class="bi bi-calendar3"></i> ${blog.date}</span>
         <span><i class="bi bi-person"></i> OZO Team</span>
         <span class="article-cat-badge">${topic.category}</span>
-        <span><i class="bi bi-bookmark"></i> ${part.label}</span>
+        <span><i class="bi bi-bookmark"></i> ${blog.label}</span>
       </div>
-      <h2>${part.title}</h2>
-      ${part.body}
+      <h2>${blog.title}</h2>
+      ${blog.body}
     `;
 
-    document.getElementById('viewParts').style.display = 'none';
+    document.getElementById('viewblogs').style.display   = 'none';
     document.getElementById('viewArticle').style.display = '';
     document.getElementById('articleReaderBody').scrollTop = 0;
   }
 
   function backToList() {
-    document.getElementById('viewParts').style.display = '';
+    document.getElementById('viewblogs').style.display   = '';
     document.getElementById('viewArticle').style.display = 'none';
   }
 
   document.getElementById('blogModal').addEventListener('hidden.bs.modal', () => {
-    document.getElementById('viewParts').style.display = '';
+    document.getElementById('viewblogs').style.display   = '';
     document.getElementById('viewArticle').style.display = 'none';
   });
 
