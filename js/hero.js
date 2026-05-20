@@ -1,6 +1,6 @@
 /* =============================================
    HERO VIDEO — hero.js
-   Autoplay video with mobile fallback
+   Single background video with static text
 ============================================= */
 
 const video    = document.querySelector('.hero-vid');
@@ -8,27 +8,25 @@ const fallback = document.getElementById('heroFallback');
 
 function showFallback() {
   if (fallback) fallback.style.display = 'block';
-  if (video)    video.style.display    = 'none';
 }
 
+/* Play video on load */
 if (video) {
-  // Try to play
-  const playPromise = video.play();
+  // playsinline — iOS mobile autoplay fix
+  video.setAttribute('playsinline', '');
 
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {
-      showFallback();
-    });
-  }
+  video.play().catch(() => {
+    showFallback();
+  });
 
-  video.addEventListener('error', showFallback);
+  video.addEventListener('error', () => {
+    showFallback();
+  });
 
-  // Mobile: if video stalls for too long, show fallback
+  // Mobile:
   setTimeout(() => {
     if (video.readyState < 2) {
       showFallback();
     }
   }, 3000);
-} else {
-  showFallback();
 }
