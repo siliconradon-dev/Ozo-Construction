@@ -301,16 +301,14 @@ li,
     min-height: 40vh;
     padding-bottom: 24px;
     align-items: flex-end;
-    overflow: visible;
   }
   .hero-vid {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
-    background: #000;
   }
   #heroFallback {
-    object-fit: contain;
-    background: #000;
+    object-fit: cover;
+    object-position: center center;
   }
   #hero .hero-text {
     padding: 0 12px;
@@ -329,10 +327,6 @@ li,
   #hero {
     min-height: 35vh;
     padding-bottom: 16px;
-  }
-  .hero-vid {
-    object-fit: contain;
-    background: #000;
   }
   #heroHeading {
     font-size: clamp(0.85rem, 3.5vw, 1.1rem);
