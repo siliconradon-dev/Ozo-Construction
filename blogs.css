@@ -1,8 +1,7 @@
 /* =============================================
-   BLOGS.CSS
-   Only blog-specific styles here.
-   navbar / footer / backTop / #ctaBanner —
-   ඒ ඔල style.css ෙකේ already defined.
+   BLOGS.CSS — Blog-specific styles only
+   navbar / footer / backTop / #ctaBanner
+   ➜ style.css ෙකේ already defined
 ============================================= */
 
 /* ── Page Hero ── */
@@ -47,6 +46,14 @@
   height: 100%; display: flex; flex-direction: column;
   text-decoration: none; color: inherit;
 }
+.topic-card,
+.topic-card h5,
+.topic-card p,
+.topic-card span,
+.topic-card * {
+  text-decoration: none !important;
+  color: inherit;
+}
 .topic-card:hover {
   box-shadow: 0 12px 38px rgba(0,0,0,0.13);
   transform: translateY(-5px); color: inherit;
@@ -79,10 +86,12 @@
 .topic-card-body h5 {
   font-size: 1.08rem; font-weight: 800;
   color: var(--dark); line-height: 1.35; margin-bottom: 10px;
+  text-decoration: none;
 }
 .topic-card-body p {
   font-size: 0.87rem; color: #777;
   line-height: 1.7; margin-bottom: 20px; flex: 1;
+  text-decoration: none;
 }
 .topic-view-btn {
   display: inline-flex; align-items: center; gap: 7px;
@@ -95,7 +104,7 @@
 .topic-view-btn i { transition: transform 0.2s; }
 .topic-card:hover .topic-view-btn i { transform: translateX(4px); }
 
-/* ── Topic Blog List — Blog cards ── */
+/* ── Blog List — Blog cards ── */
 .blogs-section { padding: 64px 0 80px; background: #f8f8f8; }
 
 .blog-card {
@@ -154,6 +163,7 @@
   object-position: center top;
   margin: 40px auto 0;
 }
+
 .blog-content-wrap {
   max-width: 980px;
   margin: 0 auto;
@@ -164,6 +174,7 @@
   font-weight: 800; color: var(--dark);
   line-height: 1.25; text-align: center; margin-bottom: 16px;
 }
+
 .blog-meta {
   display: flex; flex-wrap: wrap;
   justify-content: center; align-items: center;
@@ -177,14 +188,19 @@
   font-weight: 700; text-transform: uppercase; font-size: 0.78rem;
 }
 .blog-meta a:hover { color: var(--yellow); }
+
+/* Body — override style.css global justify */
 .blog-body p {
-  color: #333; line-height: 1.85;
-  font-size: 1rem; margin-bottom: 22px;
-  text-align: left;
-  hyphens: none;
-  overflow-wrap: normal;
-  word-break: normal;
+  color: #333 !important;
+  line-height: 1.85 !important;
+  font-size: 1rem !important;
+  margin-bottom: 22px !important;
+  text-align: justify !important;
+  hyphens: none !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
 }
+
 .blog-tags {
   display: flex; align-items: center; justify-content: space-between;
   margin-top: 36px; padding: 14px 18px;
@@ -198,7 +214,9 @@
   font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 10px;
 }
 .blog-comment-section p { font-size: 0.85rem; color: #999; }
-.blog-comment-section a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+.blog-comment-section a {
+  color: var(--yellow); text-decoration: none; font-weight: 600;
+}
 
 .back-link {
   display: inline-flex; align-items: center; gap: 8px;
@@ -234,7 +252,8 @@
   width: 34px; height: 34px; flex-shrink: 0; border-radius: 50%;
   background: var(--dark); color: var(--yellow);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.8rem; font-weight: 800; transition: background 0.2s, color 0.2s;
+  font-size: 0.8rem; font-weight: 800;
+  transition: background 0.2s, color 0.2s;
 }
 .related-item:hover .rel-num,
 .related-item.current .rel-num { background: var(--yellow); color: #111; }
@@ -246,10 +265,78 @@
 .rel-arrow { color: #ccc; margin-left: auto; transition: color 0.2s, transform 0.2s; }
 .related-item:hover .rel-arrow { color: var(--yellow); transform: translateX(4px); }
 
-/* Override style.css global justify — blog body text left aligned */
-.blog-body p {
-  text-align: left !important;
-  hyphens: none !important;
-  overflow-wrap: normal !important;
-  word-break: normal !important;
+/* =============================================
+   RESPONSIVE — Bootstrap breakpoints
+============================================= */
+
+/* Tablet — md (max 991px) */
+@media (max-width: 991px) {
+  .page-hero { padding: 48px 0 36px; }
+
+  .projects-section { padding: 56px 0 64px; }
+  .topic-card-img { height: 190px; }
+
+  .blogs-section { padding: 56px 0 64px; }
+  .blog-card-img { height: 190px; }
+
+  .blog-hero-img {
+    width: calc(100% - 100px);
+    height: 480px;
+    margin: 28px auto 0;
+  }
+  .blog-content-wrap { padding: 56px 60px 64px; }
+  .blog-content-wrap h1 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+}
+
+/* Mobile — sm (max 767px) */
+@media (max-width: 767px) {
+  .page-hero { padding: 36px 0 28px; }
+
+  .projects-section { padding: 40px 0 48px; }
+  .topic-card-img { height: 170px; }
+  .topic-card-body { padding: 16px 18px 18px; }
+
+  .blogs-section { padding: 40px 0 48px; }
+  .blog-card-img { height: 170px; }
+
+  .blog-hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    margin: 20px auto 0;
+  }
+  .blog-content-wrap {
+    padding: 40px 24px 48px;
+    max-width: 100%;
+  }
+  .blog-content-wrap h1 { font-size: clamp(1.4rem, 4vw, 1.9rem); }
+
+  .related-section { padding: 36px 0 48px; }
+}
+
+/* Small mobile — xs (max 575px) */
+@media (max-width: 575px) {
+  .page-hero { padding: 28px 0 22px; }
+
+  .projects-section { padding: 32px 0 40px; }
+  .topic-card-img { height: 150px; }
+
+  .blogs-section { padding: 32px 0 40px; }
+  .blog-card-img { height: 150px; }
+
+  .blog-hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    margin: 16px auto 0;
+  }
+  .blog-content-wrap { padding: 32px 16px 40px; }
+  .blog-content-wrap h1 { font-size: clamp(1.2rem, 3.5vw, 1.6rem); }
+
+  .blog-meta { font-size: 0.74rem; }
+  .blog-meta .sep { margin: 0 5px; }
+
+  .related-section { padding: 28px 0 36px; }
+  .related-item { padding: 10px 12px; gap: 10px; }
+  .rel-num { width: 30px; height: 30px; font-size: 0.75rem; }
 }
