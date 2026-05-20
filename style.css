@@ -302,13 +302,11 @@ li,
     padding-bottom: 24px;
     align-items: flex-end;
   }
-  .hero-vid {
-    object-fit: cover;
-    object-position: center center;
-  }
+  .hero-vid,
   #heroFallback {
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
+    background: #000;
   }
   #hero .hero-text {
     padding: 0 12px;
