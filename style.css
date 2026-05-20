@@ -298,21 +298,29 @@ li,
 
 @media (max-width: 767px) {
   #hero {
-    min-height: 38vh;
-    max-height: 200px;
-    padding-bottom: 20px;
+    min-height: 40vh;
+    padding-bottom: 24px;
     align-items: flex-end;
+    overflow: visible;
+  }
+  .hero-vid {
+    object-fit: contain;
+    object-position: center center;
+    background: #000;
+  }
+  #heroFallback {
+    object-fit: contain;
+    background: #000;
   }
   #hero .hero-text {
-    text-align: left;
     padding: 0 12px;
   }
   #heroHeading {
-    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     white-space: nowrap;
-    max-width: 90vw;
+    max-width: 95vw;
   }
-  @keyframes typeIt { to { width: 14ch; } }
+  @keyframes typeIt { to { width: 26ch; } }
   #heroDots { bottom: 8px; right: 10px; }
   .hero-dot { width: 7px; height: 7px; }
 }
@@ -320,13 +328,16 @@ li,
 @media (max-width: 575px) {
   #hero {
     min-height: 35vh;
-    max-height: 190px;
     padding-bottom: 16px;
   }
-  #heroHeading {
-    font-size: clamp(0.95rem, 4vw, 1.2rem);
+  .hero-vid {
+    object-fit: contain;
+    background: #000;
   }
-  @keyframes typeIt { to { width: 14ch; } }
+  #heroHeading {
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+  }
+  @keyframes typeIt { to { width: 26ch; } }
 }
 
 /* =============================================
