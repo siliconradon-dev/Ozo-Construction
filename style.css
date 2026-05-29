@@ -374,8 +374,8 @@ li,
   height: 100%;
 }
 .exp-card:hover                { background: #fff; border-color: #fff; color: #222; }
-.exp-card:hover h5             { color: #111; }
-.exp-card:hover p              { color: #555; opacity: 1; }
+.exp-card:hover h5             { color: #111 !important; }
+.exp-card:hover p              { color: #111 !important; opacity: 1 !important; }
 
 .exp-icon {
   width: 72px;
