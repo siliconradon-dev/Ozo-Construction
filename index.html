@@ -130,17 +130,18 @@
           <!-- Stats -->
           <div class="row text-center g-3">
             <div class="col-4">
-              <div class="stat-num">500</div>
+              <div class="stat-num" data-target="500" data-counted="false">0</div>
               <div class="text-muted small mt-1">Layouts</div>
             </div>
             <div class="col-4">
-              <div class="stat-num">200</div>
+              <div class="stat-num" data-target="200" data-counted="false">0</div>
               <div class="text-muted small mt-1">Projects Done</div>
             </div>
             <div class="col-4">
-              <div class="stat-num">12</div>
+              <div class="stat-num" data-target="12" data-counted="false">0</div>
               <div class="text-muted small mt-1">Ongoing Projects</div>
             </div>
+          </div>
           </div>
         </div>
 
@@ -774,6 +775,38 @@
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  function countUp(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const duration = 1500;
+    const step = Math.ceil(target / (duration / 16));
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = current;
+    }, 16);
+  }
+
+  // Trigger when element scrolls into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.getAttribute('data-counted') === 'false') {
+        entry.target.setAttribute('data-counted', 'true');
+        countUp(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+    observer.observe(el);
+  });
+</script>
 
 </body>
 </html>
