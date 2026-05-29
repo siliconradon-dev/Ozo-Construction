@@ -411,6 +411,14 @@ li,
   margin-bottom: 18px;
 }
 
+.svc-card i.svc-icon {
+  font-size: 4.5rem;
+  color: var(--dark);
+  display: block;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
 .svc-card h6 {
   font-weight: 700;
   font-size: 0.95rem;
